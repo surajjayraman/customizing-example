@@ -3,6 +3,7 @@ import Intro1 from "./components/Intro1";
 import Intro2 from "./components/Intro2";
 import Intro3 from "./components/Intro3";
 import RegisterForm from "./components/RegisterForm";
+import TextInputWithFocusButton from "./components/TextInputWithFocusButton";
 function App() {
   function handleClick() {
    let randomNum = Math.floor(Math.random() * 3) + 1;
@@ -24,6 +25,9 @@ function App() {
       </tr>
       <tr>
         <RegisterForm />
+      </tr>
+      <tr>
+        <TextInputWithFocusButton />
       </tr>                
      </div>     
    </div>
