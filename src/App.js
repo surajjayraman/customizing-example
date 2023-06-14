@@ -1,3 +1,4 @@
+import InputComponent from "./components/InputComponent";
 import Intro1 from "./components/Intro1";
 import Intro2 from "./components/Intro2";
 import Intro3 from "./components/Intro3";
@@ -16,6 +17,9 @@ function App() {
      <Intro1 />
      <Intro2 />
      <Intro3 />
+     <div>
+        <InputComponent />
+     </div>     
    </div>
  );
 }
