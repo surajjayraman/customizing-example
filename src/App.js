@@ -2,6 +2,7 @@ import InputComponent from "./components/InputComponent";
 import Intro1 from "./components/Intro1";
 import Intro2 from "./components/Intro2";
 import Intro3 from "./components/Intro3";
+import RegisterForm from "./components/RegisterForm";
 function App() {
   function handleClick() {
    let randomNum = Math.floor(Math.random() * 3) + 1;
@@ -18,7 +19,12 @@ function App() {
      <Intro2 />
      <Intro3 />
      <div>
+      <tr>
         <InputComponent />
+      </tr>
+      <tr>
+        <RegisterForm />
+      </tr>                
      </div>     
    </div>
  );
