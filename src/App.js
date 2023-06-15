@@ -8,6 +8,7 @@ import MealsProvider from "./providers/MealsProvider";
 import MealsList from "./components/MealsList";
 import Counter from "./components/Counter";
 import { Routes, Route, Link } from 'react-router-dom';
+import LogicalAnd from "./components/LogicalAnd";
 
 function App() {
   function handleClick() {
@@ -52,7 +53,11 @@ function App() {
         <MealsList />
         <Counter />
       </MealsProvider>
-    </div>    
+    </div> 
+    <div>
+      <h2>Logical And Demo</h2>
+      <LogicalAnd />
+    </div>   
    </div>
  );
 }
