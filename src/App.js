@@ -4,6 +4,10 @@ import Intro2 from "./components/Intro2";
 import Intro3 from "./components/Intro3";
 import RegisterForm from "./components/RegisterForm";
 import TextInputWithFocusButton from "./components/TextInputWithFocusButton";
+import MealsProvider from "./providers/MealsProvider";
+import MealsList from "./components/MealsList";
+import Counter from "./components/Counter";
+
 function App() {
   function handleClick() {
    let randomNum = Math.floor(Math.random() * 3) + 1;
@@ -35,7 +39,11 @@ function App() {
       </tr>                
      </div> 
      <div>
-      <h2>Meals list using Context API</h2>
+      <h2>Meals list demo</h2>
+      <MealsProvider>
+        <MealsList />
+        <Counter />
+      </MealsProvider>
     </div>    
    </div>
  );
