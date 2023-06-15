@@ -20,16 +20,23 @@ function App() {
      <Intro2 />
      <Intro3 />
      <div>
+      <h2>Set up other examples</h2>
+      <h3>Input Component</h3>
       <tr>
         <InputComponent />
       </tr>
+      <h3>Registration Form</h3>
       <tr>
         <RegisterForm />
       </tr>
+      <h3>Text input with focus</h3>
       <tr>
         <TextInputWithFocusButton />
       </tr>                
-     </div>     
+     </div> 
+     <div>
+      <h2>Meals list using Context API</h2>
+    </div>    
    </div>
  );
 }
