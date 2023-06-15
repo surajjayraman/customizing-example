@@ -9,6 +9,7 @@ import MealsList from "./components/MealsList";
 import Counter from "./components/Counter";
 import { Routes, Route, Link } from 'react-router-dom';
 import LogicalAnd from "./components/LogicalAnd";
+import MyVideo from "./components/MyVideo";
 
 function App() {
   function handleClick() {
@@ -57,9 +58,15 @@ function App() {
     <div>
       <h2>Logical And Demo</h2>
       <LogicalAnd />
-    </div>   
+    </div> 
+    <div>
+      <h2>React Media Demo</h2>
+        <MyVideo />
+    </div>  
    </div>
  );
 }
+
+
 
 export default App;
