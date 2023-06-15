@@ -7,6 +7,7 @@ import TextInputWithFocusButton from "./components/TextInputWithFocusButton";
 import MealsProvider from "./providers/MealsProvider";
 import MealsList from "./components/MealsList";
 import Counter from "./components/Counter";
+import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   function handleClick() {
@@ -18,11 +19,18 @@ function App() {
  
  return (
    <div>
+    <nav className="nav">
+      <Link to="/" className="nav-item">Homepage </Link>      
+      <Link to='/about-me' className="nav-item">About Me </Link>
+      <Link to='/blog' className="nav-item">Blog</Link>
+    </nav>
      <h1>Task: Add a button and handle a click event</h1>
      <button onClick={handleClick}>Guess the number between 1 and 3.</button>
-     <Intro1 />
-     <Intro2 />
-     <Intro3 />
+     <Routes>
+      <Route path="/" element={<Intro1 />} />
+      <Route path="/about-me" element={<Intro2 />} />
+      <Route path="/blog" element={<Intro3 />} />
+     </Routes>    
      <div>
       <h2>Set up other examples</h2>
       <h3>Input Component</h3>
