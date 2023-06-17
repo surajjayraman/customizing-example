@@ -18,7 +18,11 @@ const Form = () => {
     return ( 
       <form onSubmit={handleSubmit}> 
         <input ref={inputRef} type="text" /> 
-        <input value={input} onChange={handleChange} type='text' />
+        <div>
+            <h3>Controlled Element</h3>
+            <input value={input} onChange={handleChange} type='text' />
+        </div>
+        
       </form> 
     ); 
    }; 
