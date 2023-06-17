@@ -11,6 +11,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import LogicalAnd from "./components/LogicalAnd";
 import MyVideo from "./components/MyVideo";
 import DessertsList from "./components/DessertsList";
+import Form from "./components/Form"
 
 // Desserts Data
 const desserts = [
@@ -90,6 +91,10 @@ function App() {
     <div className="App">
       <h2>List of low calorie desserts:</h2>
       <DessertsList data={desserts} />
+    </div>
+    <div>
+      <h3> Uncontrolled vs Controlled Form Demo</h3>
+      <Form />
     </div>  
    </div>
  );
