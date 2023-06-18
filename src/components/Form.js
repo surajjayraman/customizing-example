@@ -5,8 +5,9 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         const inputValue = inputRef.current.value;
-        console.log(inputValue);
+        console.log(`Form Submitted! with value ${inputValue}`);
         e.preventDefault();
+        setInput('');
     }
 
     const handleChange = (e) => {
@@ -20,9 +21,10 @@ const Form = () => {
         <input ref={inputRef} type="text" /> 
         <div>
             <h3>Controlled Element</h3>
-            <input value={input} onChange={handleChange} type='text' />
+            <label htmlFor='name'>Name:</label>
+            <input id="name" value={input} onChange={handleChange} type='text' />
         </div>
-        
+        <button disabled={!input} type='submit'>Submit</button>        
       </form> 
     ); 
    }; 

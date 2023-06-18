@@ -11,7 +11,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import LogicalAnd from "./components/LogicalAnd";
 import MyVideo from "./components/MyVideo";
 import DessertsList from "./components/DessertsList";
-import Form from "./components/Form"
+import Form from "./components/Form";
+import { useState } from 'react';
 
 // Desserts Data
 const desserts = [
@@ -37,6 +38,17 @@ const desserts = [
   },
 ];
 function App() {
+
+  const [greeting, setGreeting] = useState({
+    greet: "Hello, World"
+  });
+
+  const updateGreeting = () => {
+    setGreeting(prevState => {
+      return {...prevState, greet: "World-Wide Web"}     
+    });
+  }
+
   function handleClick() {
    let randomNum = Math.floor(Math.random() * 3) + 1;
    console.log(randomNum);
@@ -96,6 +108,10 @@ function App() {
       <h3> Uncontrolled vs Controlled Form Demo</h3>
       <Form />
     </div>  
+    <div>
+      <h1>{greeting.greet}</h1>
+      <button onClick={updateGreeting}>Update Greeting</button>
+    </div>
    </div>
  );
 }
